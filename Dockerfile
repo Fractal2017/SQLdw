@@ -14,7 +14,7 @@ WORKDIR /tmp/backup
 #RUN wget --no-check-certificate https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers-v0.2/WideWorldImporters-Full.bak
 #RUN wget --no-check-certificate https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak
 
-COPY ./scripts/* ./
+COPY ./scripts/* .
 CMD /bin/bash ./entrypoint.sh
 #RUN  ./provision.sh
 
