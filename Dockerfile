@@ -15,6 +15,7 @@ WORKDIR /tmp/backup
 #RUN wget --no-check-certificate https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak
 
 COPY ./scripts/* ./
+
 CMD /bin/bash ./entrypoint.sh
 #RUN  ./provision.sh
 
