@@ -29,4 +29,4 @@ To get your container created and running you will have to execute the following
 >$ docker-compose up -d
 ```
 #### Note
-> As per the documentation, the base image [microsoft/mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux, which runs on linux/amd64 SQL Server 2017) is no longer updated since 2019.
+> As per the documentation, the base image [microsoft/mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux) , which runs on linux/amd64 SQL Server 2017, is no longer updated since 2019.
