@@ -63,7 +63,7 @@ You should initially see this log messages
 2021-04-03 18:15:10.43 spid6s      Recovery is complete. This is an informational message only. No user action is required.<p>
 2021-04-03 18:15:10.45 spid21s     The default language (LCID 0) has been set for engine and full-text services.<p>
 
-Wait for about 1 or 2 minutes until you see the additional lines coming up. Only then the sql server instance the db is ready
+Wait for about 1 or 2 minutes until you see the additional lines coming up. Only then the sql server instance and the AdventureWorksDW db is ready
 
 >2021-04-03 18:16:35.21 spid51      Starting up database 'DemoData'.<p>
 2021-04-03 18:16:35.39 spid51      Parallel redo is started for database 'DemoData' with worker pool size [1].<p>
