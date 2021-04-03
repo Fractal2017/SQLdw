@@ -2,6 +2,24 @@
 Container that runs SQL Server on Linux (Platform: linux, x86_64, name=ubuntu, version=16.04 (Ubuntu16)) using the base image: [microsoft/mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux), i.e Microsoft MSSQL Server 2017 for Linux Docker Edition and provides a default database
 
 ![Architecture](./images/Architecture.png)
+## TL;DR
+1. Clone this repo https://github.com/Fractal2017/SQLdw
+``` 
+    $ gh repo clone Fractal2017/SQLdw 
+```
+
+2. Build Image
+```
+    $ docker build -t db/sql .
+```
+
+3. Create Container
+```
+    $ docker-compose up -d
+```
+4. Wait for 1 or 2 minutes. Done!
+
+
 
 ## The Dockerfile
 The Dockerfile uses the base image [microsoft/mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux) and does three things:
