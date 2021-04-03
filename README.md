@@ -84,5 +84,26 @@ Processed 12168 pages for database 'AdventureWorksDW2017', file 'AdventureWorksD
 Processed 3 pages for database 'AdventureWorksDW2017', file 'AdventureWorksDW2017_log' on file 1.<p>
 RESTORE DATABASE successfully processed 12171 pages in 0.292 seconds (325.615 MB/sec).<p>
 
+### References
+All DB Samples
+https://docs.microsoft.com/en-us/sql/samples/sql-samples-where-are?view=sql-server-ver15
+Git: https://github.com/microsoft/sql-server-samples/tree/master/samples/databases
+
+AdventureWorks (OLTP/DW)
+https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=tsql
+
+Git: https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/adventure-works
+
+WorldwideImport (OLTP/DW)
+https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-dw-install-configure?view=sql-server-ver15
+
+Git: https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers
+
+Note:
+Git Release1.0: https://github.com/microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0
+
+Git Pre-release: https://github.com/microsoft/sql-server-samples/releases/tag/wide-world-importers-v0.2
+
 #### Note
 > As per the documentation, the base image [microsoft/mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux) , which runs on linux/amd64 SQL Server 2017, is no longer updated since 2019.
+
