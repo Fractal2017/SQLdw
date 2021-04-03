@@ -87,6 +87,7 @@ RESTORE DATABASE successfully processed 12171 pages in 0.292 seconds (325.615 MB
 ### References
 All DB Samples
 https://docs.microsoft.com/en-us/sql/samples/sql-samples-where-are?view=sql-server-ver15
+
 Git: https://github.com/microsoft/sql-server-samples/tree/master/samples/databases
 
 AdventureWorks (OLTP/DW)
