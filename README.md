@@ -25,13 +25,16 @@ This directory ./scripts/ contains all the scripts to download sample databases 
 To get your container created and running you will have to execute the following commands in the order indicated:
 ### Create the Image
 ``` bash
-$ docker build -t sqldwimage .
+$ docker build -t db/sql .
 ```
-
+![Docker Build](./images/DockerBuild.png)
 ### Create the Container
 ``` bash
 $ docker-compose up -d
 ```
+![Docker Compose](./images/DockerCompose.png)
+
+You can also do the above using Visual Studio Code (VS Code), as follows:
 
 ### VS-Code: Container creation
 
