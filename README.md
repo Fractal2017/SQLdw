@@ -9,7 +9,7 @@ The Dockerfile uses the base image [microsoft/mssql-server-linux](https://hub.do
 3. Updates the entrypoint.sh to run the custom scripts from step 2.
 
 ## The Scripts
-This directory ./scripts/ contains all the scripts to downdload sample databases (AdventureWorks, WorldWide Imports), and creates a simple one (demodata)
+This directory ./scripts/ contains all the scripts to download sample databases (AdventureWorks, WorldWide Imports), and creates a simple one (demodata)
 
 1. entrypoint.sh: This script calls subsequent other scripts i.e run-initialization.sh but more importantly it also starts the SQLServer database
 2. run-initialization.sh: This script performs "wget" and execute two other scripts create-db.sql and restoreAdvWkrs.sql  
