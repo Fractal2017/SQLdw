@@ -1,7 +1,8 @@
 # SQL and default DB (Adventure Works DW)
 Container that runs SQL Server on Linux (Platform: linux, x86_64, name=ubuntu, version=16.04 (Ubuntu16)) using the base image: [microsoft/mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux), i.e Microsoft MSSQL Server 2017 for Linux Docker Edition and provides a default database
 
-![Architecture](./images/Architecture.png)
+<center><img src="./images/Architecture.png" width="75%" height="75%"></center>
+
 ## TL;DR
 1. Clone this repo https://github.com/Fractal2017/SQLdw
 ``` 
@@ -19,7 +20,9 @@ Container that runs SQL Server on Linux (Platform: linux, x86_64, name=ubuntu, v
 ```
 4. Wait for 1 or 2 minutes. Done!
 
-
+#### Note
+> 1. As per the documentation, the base image [microsoft/mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux) , which runs on linux/amd64 SQL Server 2017, is no longer updated since 2019.
+> 2. ^M characters are the same as LF/CR (line feed/ Carriage Return) which are line ending characters in Windows. In Unix/Linux there is only the LF character. If you edit a text file in Windows and port the file to Linux (or viceversa), make sure these characters are set accordingly
 
 ## The Dockerfile
 The Dockerfile uses the base image [microsoft/mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux) and does three things:
@@ -122,7 +125,4 @@ Note:
 Git Release1.0: https://github.com/microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0
 
 Git Pre-release: https://github.com/microsoft/sql-server-samples/releases/tag/wide-world-importers-v0.2
-
-#### Note
-> As per the documentation, the base image [microsoft/mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux) , which runs on linux/amd64 SQL Server 2017, is no longer updated since 2019.
 
