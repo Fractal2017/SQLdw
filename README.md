@@ -41,9 +41,9 @@ DB    : DemoData (or AdventureWorksDW2017 or master)
 ```
     $ docker logs --tail 1000 -f sqldw
 ```
-
-#### Note
-> 1. As per the documentation, the base image [microsoft/mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux) , which runs on linux/amd64 SQL Server 2017, is no longer updated since 2019.
+        Until you see something similar to:
+        > Processed 3 pages for database 'AdventureWorksDW2017', file 'AdventureWorksDW2017_log' on file 1.
+        > RESTORE DATABASE successfully processed 12171 pages in 0.292 seconds (325.615 MB/sec).
 
 ## The Dockerfile
 The Dockerfile uses the base image [microsoft/mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux) and does three things:
@@ -125,6 +125,9 @@ Changed database context to 'DemoData'.<p>
 Processed 12168 pages for database 'AdventureWorksDW2017', file 'AdventureWorksDW2017' on file 1.<p>
 Processed 3 pages for database 'AdventureWorksDW2017', file 'AdventureWorksDW2017_log' on file 1.<p>
 RESTORE DATABASE successfully processed 12171 pages in 0.292 seconds (325.615 MB/sec).<p>
+
+### Note:
+As per the documentation, the base image [microsoft/mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux) , which runs on linux/amd64 SQL Server 2017, is no longer updated since 2019.<p>
 
 ### References
 1. All DB Samples
