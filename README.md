@@ -17,31 +17,33 @@ DB    : DemoData (or AdventureWorksDW2017 or master)
     OR
     DOS> git clone https://github.com/Fractal2017/SQLdw
 ```
+2. If you are under windows then please consider this:
+    
+    **Text line End:**<p>
+    **Linux**: LF (Line Feed)<p>
+    **Windows**: LF/CR (Line Feed+Carriage Return), ie ^J + ^M <p>
 
-2. Build Image
+    Since Script *.sh files (entrypoint.sh and run-initialization.sh) will be executed in Linux, make sure to remove the ^M or [CR] characters before running docker compose. In **VS Code**: Files need to be edited with VS Code setting as LF
+<center><img src="./images/VSCodeLF.png" width="75%" height="75%"></center>
+
+
+3. Build Image
 ```
     $ cd SQLdw
     $ docker build -t db/sql .
 ```
 
-3. Create Container
+4. Create Container
 ```
     $ docker-compose up -d
 ```
-4. Check LOGS: Wait for 1 or 2 minutes
+5. Check LOGS: Wait for 1 or 2 minutes
 ```
     $ docker logs --tail 1000 -f sqldw
 ```
 
 #### Note
 > 1. As per the documentation, the base image [microsoft/mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux) , which runs on linux/amd64 SQL Server 2017, is no longer updated since 2019.
-> 2. Text line end:<p>
- **Linux**: LF (Line Feed)<p>
- **Windows**: LF/CR (Line Feed+Carriage Return), ie ^J + ^M <p>
-  Since Script files (*.sh) will be executed in Linux, if modified in Windows then 
-  make sure to remove the ^M or [CR] characters before running docker compose.
-> 3. VS Code: Under Windows all the *.sh files need to be edited with VS Code setting as LF
-<center><img src="./images/VSCodeLF.png" width="75%" height="75%"></center>
 
 ## The Dockerfile
 The Dockerfile uses the base image [microsoft/mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux) and does three things:
