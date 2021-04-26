@@ -3,10 +3,19 @@ Container that runs SQL Server on Linux (Platform: linux, x86_64, name=ubuntu, v
 
 <center><img src="./images/Architecture.png" width="75%" height="75%"></center>
 
+```
+Server: localhost
+User  : sa
+pwd   : SqlDevOps2017
+DB    : DemoData (or AdventureWorksDW2017 or master)
+```
+
 ## TL;DR
 1. Clone this repo https://github.com/Fractal2017/SQLdw
 ``` 
     $ gh repo clone Fractal2017/SQLdw 
+    OR
+    DOS> git clone https://github.com/Fractal2017/SQLdw
 ```
 
 2. Build Image
@@ -22,7 +31,13 @@ Container that runs SQL Server on Linux (Platform: linux, x86_64, name=ubuntu, v
 
 #### Note
 > 1. As per the documentation, the base image [microsoft/mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux) , which runs on linux/amd64 SQL Server 2017, is no longer updated since 2019.
-> 2. ^M characters are the same as LF/CR (line feed/ Carriage Return) which are line ending characters in Windows. In Unix/Linux there is only the LF character. If you edit a text file in Windows and port the file to Linux (or viceversa), make sure these characters are set accordingly
+> 2. Text line end:<p>
+ **Linux**: LF (Line Feed)<p>
+ **Windows**: LF/CR (Line Feed+Carriage Return), ie ^J + ^M <p>
+  Since Script files (*.sh) will be executed in Linux, if modified in Windows then 
+  make sure to remove the ^M or [CR] characters before running docker compose.
+> 3. VS Code: Under Windows all the *.sh files need to be edited with VS Code setting as LF
+<center><img src="./images/VSCodeLF.png" width="75%" height="75%"></center>
 
 ## The Dockerfile
 The Dockerfile uses the base image [microsoft/mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux) and does three things:
@@ -106,23 +121,19 @@ Processed 3 pages for database 'AdventureWorksDW2017', file 'AdventureWorksDW201
 RESTORE DATABASE successfully processed 12171 pages in 0.292 seconds (325.615 MB/sec).<p>
 
 ### References
-All DB Samples
-https://docs.microsoft.com/en-us/sql/samples/sql-samples-where-are?view=sql-server-ver15
+1. All DB Samples
+    - https://docs.microsoft.com/en-us/sql/samples/sql-samples-where-are?view=sql-server-ver15
+    - Git: https://github.com/microsoft/sql-server-samples/tree/master/samples/databases
 
-Git: https://github.com/microsoft/sql-server-samples/tree/master/samples/databases
+3. AdventureWorks (OLTP/DW)
+    - https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=tsql
+    - Git: https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/adventure-works
 
-AdventureWorks (OLTP/DW)
-https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=tsql
-
-Git: https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/adventure-works
-
-WorldwideImport (OLTP/DW)
-https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-dw-install-configure?view=sql-server-ver15
-
-Git: https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers
+5. WorldwideImport (OLTP/DW)
+    - https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-dw-install-configure?view=sql-server-ver15
+    - Git: https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers
 
 Note:
-Git Release1.0: https://github.com/microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0
-
-Git Pre-release: https://github.com/microsoft/sql-server-samples/releases/tag/wide-world-importers-v0.2
+- Samples Release1.0: https://github.com/microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0
+- Samples Pre-release: https://github.com/microsoft/sql-server-samples/releases/tag/wide-world-importers-v0.2
 
