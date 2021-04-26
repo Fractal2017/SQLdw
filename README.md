@@ -20,6 +20,7 @@ DB    : DemoData (or AdventureWorksDW2017 or master)
 
 2. Build Image
 ```
+    $ cd SQLdw
     $ docker build -t db/sql .
 ```
 
@@ -27,7 +28,10 @@ DB    : DemoData (or AdventureWorksDW2017 or master)
 ```
     $ docker-compose up -d
 ```
-4. Wait for 1 or 2 minutes. Done!
+4. Check LOGS: Wait for 1 or 2 minutes
+```
+    $ docker logs --tail 1000 -f sqldw
+```
 
 #### Note
 > 1. As per the documentation, the base image [microsoft/mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux) , which runs on linux/amd64 SQL Server 2017, is no longer updated since 2019.
