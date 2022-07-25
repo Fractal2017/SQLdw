@@ -1,4 +1,5 @@
-FROM microsoft/mssql-server-linux:latest
+#FROM microsoft/mssql-server-linux:latest
+FROM mcr.microsoft.com/mssql/server:latest
 
 ENV SA_PASSWORD SqlDevOps2017
 ENV MSSQL_PID Developer
